@@ -56,7 +56,7 @@ export default function Pricing() {
 
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
 
           <div className="space-y-8 rounded-3xl border border-white/10 bg-zinc-900/60 p-8 backdrop-blur">
 
@@ -107,7 +107,7 @@ export default function Pricing() {
 
           </div>
 
-<div className="lg:sticky lg:top-28 h-fit">
+<div className="h-fit lg:sticky lg:top-24">
   <OrderSummary
     game={selectedGame.name}
     location={`${selectedLocation.flag} ${selectedLocation.name}`}

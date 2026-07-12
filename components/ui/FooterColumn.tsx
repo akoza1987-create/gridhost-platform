@@ -21,16 +21,35 @@ export default function FooterColumn({
       </h3>
 
       <ul className="space-y-3">
-        {links.map((link) => (
-          <li key={link.label}>
-            <Link
-              href={link.href}
-              className="text-zinc-400 transition-colors hover:text-cyan-400"
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
+        {links.map((link) => {
+          const isExternal = link.href.startsWith("http");
+
+          if (isExternal) {
+            return (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 transition-colors duration-300 hover:text-cyan-400"
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          }
+
+          return (
+            <li key={link.label}>
+              <Link
+                href={link.href}
+                className="text-zinc-400 transition-colors duration-300 hover:text-cyan-400"
+              >
+                {link.label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

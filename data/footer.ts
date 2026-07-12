@@ -30,7 +30,7 @@ export const footer = {
       links: [
         { label: "Panel klienta", href: "/auth/login" },
         { label: "Status usług", href: "#" },
-        { label: "Discord", href: "#" },
+        { label: "Discord", href: "https://discord.gg/AQWRhbJegW" },
       ],
     },
   ],

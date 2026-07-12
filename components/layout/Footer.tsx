@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-zinc-950">
 
-      <div className="mx-auto max-w-7xl px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
 
         <div className="grid gap-12 lg:grid-cols-5">
 
@@ -26,9 +26,12 @@ export default function Footer() {
               {footer.company.description}
             </p>
 
-            <p className="mt-6 text-zinc-300">
+            <a
+              href={`mailto:${footer.contact.email}`}
+              className="mt-6 inline-block text-zinc-300 transition-colors duration-300 hover:text-cyan-400"
+            >
               {footer.contact.email}
-            </p>
+            </a>
 
           </div>
 
@@ -55,14 +58,14 @@ export default function Footer() {
 
               <Link
                 href="/regulamin"
-                className="text-zinc-500 hover:text-cyan-400"
+                className="text-zinc-500 transition-colors duration-300 hover:text-cyan-400"
               >
                 Regulamin
               </Link>
 
               <Link
                 href="/polityka-prywatnosci"
-                className="text-zinc-500 hover:text-cyan-400"
+                className="text-zinc-500 transition-colors duration-300 hover:text-cyan-400"
               >
                 Polityka prywatności
               </Link>
