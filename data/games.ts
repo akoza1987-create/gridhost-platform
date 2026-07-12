@@ -2,53 +2,112 @@ export const games = [
   {
     id: 1,
     slug: "minecraft",
-    title: "Minecraft",
-    price: "od 9,99 zł",
+
+    name: "Minecraft",
+    icon: "⛏️",
+
+    badge: "Najczęściej wybierany",
+
+    startingPrice: 9.99,
+    basePrice: 5,
+
     image: "/images/games/minecraft.webp",
-    description: "Paper • Spigot • Forge • Fabric",
+
+    shortDescription:
+      "Vanilla • Paper • Forge • Fabric",
+
+    description:
+      "Idealny wybór dla serwerów Vanilla, Paper, Forge i Fabric z szybkim uruchomieniem oraz pełnym wsparciem.",
+
     features: [
       "Automatyczna instalacja",
-      "Ochrona DDoS",
-      "Backupy",
+      "Zaawansowana ochrona",
+      "Codzienne kopie zapasowe",
+      "Panel klienta",
     ],
   },
+
   {
     id: 2,
     slug: "fivem",
-    title: "FiveM",
-    price: "od 19,99 zł",
+
+    name: "FiveM",
+    icon: "🚓",
+
+    badge: "Idealny do RP",
+
+    startingPrice: 19.99,
+    basePrice: 10,
+
     image: "/images/games/fivem.webp",
-    description: "Stabilny hosting GTA V RP",
+
+    shortDescription:
+      "Stabilny hosting dla FiveM",
+
+    description:
+      "Niski ping, wysoka wydajność i stabilna infrastruktura dla serwerów RP.",
+
     features: [
-      "OneSync",
-      "DDoS Protection",
-      "Pełny FTP",
+      "OneSync Ready",
+      "Zaawansowana ochrona",
+      "Panel klienta",
+      "Automatyczne backupy",
     ],
   },
+
   {
     id: 3,
     slug: "cs2",
-    title: "CS2",
-    price: "od 29,99 zł",
+
+    name: "Counter-Strike 2",
+    icon: "🎯",
+
+    badge: "Dla drużyn",
+
+    startingPrice: 29.99,
+    basePrice: 15,
+
     image: "/images/games/cs2.webp",
-    description: "Niski ping i wysoka wydajność",
+
+    shortDescription:
+      "Płynna rozgrywka dla CS2",
+
+    description:
+      "Serwery zoptymalizowane pod Counter-Strike 2 z niskimi opóźnieniami.",
+
     features: [
-      "128 Tick",
-      "DDoS Protection",
+      "Szybkie uruchomienie",
+      "Zaawansowana ochrona",
       "Auto Restart",
+      "Panel klienta",
     ],
   },
+
   {
     id: 4,
     slug: "rust",
-    title: "Rust",
-    price: "od 39,99 zł",
+
+    name: "Rust",
+    icon: "☢️",
+
+    badge: "Survival",
+
+    startingPrice: 39.99,
+    basePrice: 20,
+
     image: "/images/games/rust.webp",
-    description: "Gotowy serwer w kilka chwil",
+
+    shortDescription:
+      "Serwery Rust gotowe do gry",
+
+    description:
+      "Wydajne serwery z obsługą pluginów i pełną kontrolą nad konfiguracją.",
+
     features: [
-      "Oxide",
-      "Backupy",
-      "DDoS Protection",
+      "Obsługa pluginów",
+      "Codzienne kopie zapasowe",
+      "Zaawansowana ochrona",
+      "Panel klienta",
     ],
   },
 ];

@@ -1,7 +1,7 @@
 "use client";
 
-import { ShieldCheck, Server, Globe, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import { Globe, Server, ShieldCheck, Users } from "lucide-react";
 
 const stats = [
   {
@@ -22,34 +22,32 @@ const stats = [
   {
     icon: ShieldCheck,
     value: "99.99%",
-    label: "Uptime",
+    label: "Gwarancja dostępności",
   },
 ];
 
 export default function Stats() {
   return (
-    <section className="relative -mt-10 z-20">
+    <section className="relative py-12">
       <div className="mx-auto max-w-7xl px-6">
 
-        <div className="grid gap-5 rounded-3xl border border-white/10 bg-zinc-900/70 p-8 backdrop-blur-xl md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 rounded-3xl border border-white/10 bg-zinc-900/70 p-8 backdrop-blur-xl sm:grid-cols-2 xl:grid-cols-4">
 
           {stats.map((item, index) => {
-
             const Icon = item.icon;
 
             return (
               <motion.div
                 key={index}
                 whileHover={{ y: -6 }}
-                transition={{ duration: .25 }}
-                className="flex items-center gap-5"
+                transition={{ duration: 0.25 }}
+                className="flex items-center gap-5 rounded-2xl p-4 transition-colors hover:bg-white/5"
               >
                 <div className="rounded-2xl bg-cyan-500/10 p-4">
                   <Icon className="h-8 w-8 text-cyan-400" />
                 </div>
 
                 <div>
-
                   <h3 className="text-3xl font-bold text-white">
                     {item.value}
                   </h3>
@@ -57,12 +55,9 @@ export default function Stats() {
                   <p className="text-zinc-400">
                     {item.label}
                   </p>
-
                 </div>
-
               </motion.div>
             );
-
           })}
 
         </div>

@@ -18,8 +18,8 @@ export default function GameCard({
   features,
 }: GameCardProps) {
   return (
-    <div className="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500/40 hover:shadow-2xl hover:shadow-cyan-500/10">
-
+    
+<div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500/40 hover:shadow-2xl hover:shadow-cyan-500/10">
       {/* Banner */}
 
 <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
@@ -33,7 +33,7 @@ export default function GameCard({
 
       {/* Content */}
 
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
 
         <h3 className="text-3xl font-bold text-white">
           {title}
@@ -57,7 +57,7 @@ export default function GameCard({
 
         </div>
 
-        <div className="mt-8 flex items-center justify-between">
+        <div className="mt-auto pt-8">
 
           <span className="text-3xl font-black text-cyan-400">
             {price}
@@ -65,7 +65,7 @@ export default function GameCard({
 
         </div>
 
-        <Button className="mt-6 w-full bg-cyan-500 text-black hover:bg-cyan-400">
+        <Button className="mt-auto w-full bg-cyan-500 text-black hover:bg-cyan-400">
 
           Zamów serwer
 
