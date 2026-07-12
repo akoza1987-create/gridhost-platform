@@ -1,45 +1,19 @@
+import { games } from "@/data/games";
 import GameCard from "@/components/ui/GameCard";
-
-const games = [
-  {
-    title: "Minecraft",
-    price: "od 9,99 zł",
-    description: "Vanilla, Forge, Fabric, Paper, Spigot.",
-    color: "#16a34a",
-  },
-  {
-    title: "FiveM",
-    price: "od 19,99 zł",
-    description: "Stabilny hosting GTA V RP.",
-    color: "#f97316",
-  },
-  {
-    title: "CS2",
-    price: "od 29,99 zł",
-    description: "Niski ping i wysoka wydajność.",
-    color: "#2563eb",
-  },
-  {
-    title: "Rust",
-    price: "od 39,99 zł",
-    description: "Gotowy serwer w kilka chwil.",
-    color: "#b45309",
-  },
-];
 
 export default function Games() {
   return (
-    <section id="games" className="py-28">
+    <section id="games" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
 
-        <div className="mb-16 text-center">
+        <div className="mb-14 text-center">
 
-          <h2 className="text-5xl font-black">
+          <h2 className="text-5xl font-black text-white">
             Wybierz swoją grę
           </h2>
 
-          <p className="mt-6 text-zinc-400">
-            Zamów serwer w mniej niż minutę.
+          <p className="mt-4 text-lg text-zinc-400">
+            Wybierz grę i uruchom swój serwer w mniej niż minutę.
           </p>
 
         </div>
@@ -47,7 +21,14 @@ export default function Games() {
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
           {games.map((game) => (
-            <GameCard key={game.title} {...game} />
+            <GameCard
+              key={game.id}
+              title={game.title}
+              price={game.price}
+              image={game.image}
+              description={game.description}
+              features={game.features}
+            />
           ))}
 
         </div>

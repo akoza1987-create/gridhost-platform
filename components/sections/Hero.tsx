@@ -6,45 +6,45 @@ import {
   ArrowRight,
   ShieldCheck,
   Clock3,
-  Star,
+  Server,
 } from "lucide-react";
 import ServerPreview from "./ServerPreview";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-zinc-950 pt-28 pb-20">
+    <section className="relative overflow-hidden pt-28 pb-20">
 
-      {/* Glow Background */}
+      {/* Glow */}
 
-      <div className="absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[180px]" />
+      <div className="absolute left-1/2 top-0 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[150px]" />
 
-      <div className="relative mx-auto grid min-h-[py-20] max-w-7xl items-center gap-20 px-6 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
 
         {/* LEFT */}
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: .7 }}
+          transition={{ duration: .6 }}
         >
 
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-400">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-400">
 
-            <Star size={16} />
+            <Server size={16} />
 
             Hosting nowej generacji
 
           </div>
 
-          <h1 className="max-w-3xl text-5xl font-black leading-tight text-white md:text-7xl">
+          <h1 className="text-5xl font-black leading-tight text-white md:text-7xl">
 
-            Twój serwer.
+            Hosting,
 
             <br />
 
             <span className="text-cyan-400">
 
-              Gotowy w 30 sekund.
+              który po prostu działa.
 
             </span>
 
@@ -52,14 +52,10 @@ export default function Hero() {
 
           <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
 
-            Hosting Minecraft, FiveM, CS2 oraz Rust.
-
-            Zamów serwer w kilka kliknięć i rozpocznij grę
-            bez skomplikowanej konfiguracji.
+            Uruchom serwer Minecraft, FiveM, Counter-Strike 2
+            lub Rust w mniej niż minutę.
 
           </p>
-
-          {/* Buttons */}
 
           <div className="mt-10 flex flex-wrap gap-4">
 
@@ -78,184 +74,75 @@ export default function Hero() {
               variant="outline"
               size="lg"
             >
+
               Zobacz ofertę
+
             </Button>
 
           </div>
 
-          {/* Quick Stats */}
-
-          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
-
-            <div className="flex items-center gap-3">
-
-              <div className="rounded-xl bg-cyan-500/10 p-3">
-
-                <ShieldCheck
-                  className="text-cyan-400"
-                  size={22}
-                />
-
-              </div>
+          <div className="mt-12 flex flex-wrap gap-8">
+             <div className="flex items-center gap-3">
+              <ShieldCheck className="h-8 w-8 text-cyan-400" />
 
               <div>
-
-                <h4 className="font-bold text-white">
-
+                <p className="text-2xl font-bold text-white">
                   DDoS
-
-                </h4>
-
-                <p className="text-sm text-zinc-500">
-
-                  Ochrona Premium
-
                 </p>
 
+                <p className="text-sm text-zinc-500">
+                  Premium Protection
+                </p>
               </div>
-
             </div>
 
             <div className="flex items-center gap-3">
-
-              <div className="rounded-xl bg-cyan-500/10 p-3">
-
-                <Clock3
-                  className="text-cyan-400"
-                  size={22}
-                />
-
-              </div>
+              <Clock3 className="h-8 w-8 text-cyan-400" />
 
               <div>
-
-                <h4 className="font-bold text-white">
-
-                  30 sekund
-
-                </h4>
-
-                <p className="text-sm text-zinc-500">
-
-                  Automatyczna instalacja
-
+                <p className="text-2xl font-bold text-white">
+                  30 s
                 </p>
 
+                <p className="text-sm text-zinc-500">
+                  Automatyczne wdrożenie
+                </p>
               </div>
-
             </div>
 
             <div className="flex items-center gap-3">
-
-              <div className="rounded-xl bg-cyan-500/10 p-3">
-
-                <Star
-                  className="text-cyan-400"
-                  size={22}
-                />
-
-              </div>
+              <Server className="h-8 w-8 text-cyan-400" />
 
               <div>
-
-                <h4 className="font-bold text-white">
-
-                  4.9 / 5
-
-                </h4>
-
-                <p className="text-sm text-zinc-500">
-
-                  Ocena klientów
-
+                <p className="text-2xl font-bold text-white">
+                  99.99%
                 </p>
 
+                <p className="text-sm text-zinc-500">
+                  Gwarancja dostępności
+                </p>
               </div>
-
             </div>
 
           </div>
 
         </motion.div>
-                {/* RIGHT */}
+
+        {/* RIGHT */}
 
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex items-center justify-center"
+          transition={{ duration: 0.8 }}
+          className="relative flex justify-center"
         >
-          {/* Efekt świecenia */}
-          <div className="absolute h-[550px] w-[550px] rounded-full bg-cyan-500/10 blur-[140px]" />
-
-          {/* Panel serwera */}
-          <div className="relative w-full max-w-lg">
-            <ServerPreview />
-          </div>
-
-          {/* Pływające badge */}
-          <motion.div
-            animate={{ y: [-8, 8, -8] }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute -left-6 top-16 hidden rounded-2xl border border-cyan-500/20 bg-zinc-900/90 px-5 py-4 shadow-xl backdrop-blur-xl lg:block"
-          >
-            <p className="text-xs uppercase tracking-wider text-zinc-500">
-              Ping
-            </p>
-
-            <h3 className="mt-1 text-2xl font-bold text-cyan-400">
-              3 ms
-            </h3>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [8, -8, 8] }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute -right-6 bottom-20 hidden rounded-2xl border border-cyan-500/20 bg-zinc-900/90 px-5 py-4 shadow-xl backdrop-blur-xl lg:block"
-          >
-            <p className="text-xs uppercase tracking-wider text-zinc-500">
-              Uptime
-            </p>
-
-            <h3 className="mt-1 text-2xl font-bold text-green-400">
-              99.99%
-            </h3>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [-6, 6, -6] }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute bottom-0 left-10 hidden rounded-2xl border border-cyan-500/20 bg-zinc-900/90 px-5 py-4 shadow-xl backdrop-blur-xl xl:block"
-          >
-            <p className="text-xs uppercase tracking-wider text-zinc-500">
-              Status
-            </p>
-
-            <div className="mt-2 flex items-center gap-2">
-              <div className="h-3 w-3 rounded-full bg-green-500" />
-
-              <span className="font-semibold text-white">
-                Wszystkie usługi online
-              </span>
-            </div>
-          </motion.div>
+          <ServerPreview />
         </motion.div>
-              </div>
 
-      {/* Delikatna linia oddzielająca */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
+      </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+
     </section>
   );
 }
