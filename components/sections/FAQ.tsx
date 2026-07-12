@@ -8,8 +8,8 @@ import {
 export default function FAQ() {
   return (
     <section
-      id="faq"
-      className="py-28"
+  id="faq"
+  className="py-24 lg:py-28"
     >
       <div className="mx-auto max-w-5xl px-6">
 

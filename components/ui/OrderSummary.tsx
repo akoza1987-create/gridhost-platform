@@ -33,7 +33,7 @@ export default function OrderSummary({
         Twoja konfiguracja
       </h2>
 
-      <div className="space-y-5">
+      <div className="space-y-6">
 
         <Row
           icon={<Gamepad2 size={18} />}
@@ -75,7 +75,7 @@ export default function OrderSummary({
           Cena miesięczna
         </p>
 
-        <h3 className="mt-2 text-5xl font-black text-cyan-400">
+        <h3 className="mt-2 text-6xl font-black text-cyan-400">
           {price.toFixed(2)} zł
         </h3>
 
@@ -97,7 +97,7 @@ export default function OrderSummary({
 
       <Button className="mt-8 h-12 w-full bg-cyan-500 text-black hover:bg-cyan-400">
 
-        Uruchom serwer
+        Przejdź do zamówienia
 
         <ArrowRight className="ml-2 h-5 w-5" />
 

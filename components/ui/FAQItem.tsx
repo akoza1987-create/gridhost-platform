@@ -20,13 +20,13 @@ export default function FAQItem({
   return (
     <AccordionItem
       value={value}
-      className="rounded-2xl border border-white/10 bg-zinc-900/60 px-6 mb-4"
+      className="mb-4 rounded-2xl border border-white/10 bg-zinc-900/60 px-6 transition-colors duration-300 hover:border-cyan-500/30"
     >
-      <AccordionTrigger className="text-left text-lg font-semibold text-white hover:no-underline">
+      <AccordionTrigger className="py-6 text-left text-lg font-semibold text-white hover:no-underline">
         {question}
       </AccordionTrigger>
 
-      <AccordionContent className="pb-6 text-zinc-400 leading-7">
+      <AccordionContent className="pb-6 leading-7 text-zinc-400">
         {answer}
       </AccordionContent>
     </AccordionItem>

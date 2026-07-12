@@ -107,14 +107,16 @@ export default function Pricing() {
 
           </div>
 
-          <OrderSummary
-            game={selectedGame.name}
-            location={`${selectedLocation.flag} ${selectedLocation.name}`}
-            ram={ram}
-            cpu={cpu}
-            disk={disk}
-            price={totalPrice}
-          />
+<div className="lg:sticky lg:top-28 h-fit">
+  <OrderSummary
+    game={selectedGame.name}
+    location={`${selectedLocation.flag} ${selectedLocation.name}`}
+    ram={ram}
+    cpu={cpu}
+    disk={disk}
+    price={totalPrice}
+  />
+</div>
 
         </div>
 

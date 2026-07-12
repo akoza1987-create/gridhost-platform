@@ -3,7 +3,7 @@ import FeatureCard from "@/components/ui/FeatureCard";
 
 export default function Features() {
   return (
-    <section id="features" className="py-28">
+    <section id="features" className="py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-6">
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
