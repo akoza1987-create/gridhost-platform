@@ -1,5 +1,6 @@
 import PageHeader from "@/components/panel/PageHeader";
-import ServerGrid from "@/components/panel/ServerGrid";
+import ServerSummary from "@/components/panel/ServerSummary";
+import ServerManager from "@/components/panel/ServerManager";
 
 export default function ServersPage() {
   return (
@@ -9,7 +10,13 @@ export default function ServersPage() {
         description="Zarządzaj wszystkimi swoimi serwerami w jednym miejscu."
       />
 
-      <ServerGrid />
+      <ServerSummary
+        total={3}
+        online={2}
+        offline={1}
+      />
+
+      <ServerManager />
     </div>
   );
 }

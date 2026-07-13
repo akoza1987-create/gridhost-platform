@@ -1,39 +1,37 @@
 import ServerCard from "./ServerCard";
 
-const servers = [
-  {
-    id: 1,
-    name: "Survival SMP",
-    game: "Minecraft Java",
-    location: "🇵🇱 Warszawa",
-    ram: "4 GB RAM",
-    cpu: "2 vCPU",
-    disk: "50 GB NVMe",
-    status: "online" as const,
-  },
-  {
-    id: 2,
-    name: "FiveM RP",
-    game: "FiveM",
-    location: "🇩🇪 Frankfurt",
-    ram: "8 GB RAM",
-    cpu: "4 vCPU",
-    disk: "80 GB NVMe",
-    status: "online" as const,
-  },
-  {
-    id: 3,
-    name: "Test Server",
-    game: "CS2",
-    location: "🇵🇱 Warszawa",
-    ram: "2 GB RAM",
-    cpu: "1 vCPU",
-    disk: "25 GB NVMe",
-    status: "offline" as const,
-  },
-];
+type Server = {
+  id: number;
+  name: string;
+  game: string;
+  location: string;
+  ram: string;
+  cpu: string;
+  disk: string;
+  status: "online" | "offline";
+};
 
-export default function ServerGrid() {
+type ServerGridProps = {
+  servers: Server[];
+};
+
+export default function ServerGrid({ servers }: ServerGridProps) {
+  console.log("ServerGrid received:", servers);
+
+  if (servers.length === 0) {
+    return (
+      <div className="rounded-2xl border border-dashed border-white/10 bg-zinc-900/60 p-10 text-center">
+        <h2 className="text-2xl font-bold text-white">
+          Nie znaleziono serwerów
+        </h2>
+
+        <p className="mt-2 text-zinc-400">
+          Spróbuj wpisać inną nazwę.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="grid gap-6 xl:grid-cols-2">
       {servers.map((server) => (
