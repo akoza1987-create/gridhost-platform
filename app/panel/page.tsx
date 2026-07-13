@@ -7,6 +7,7 @@ import {
 
 import StatCard from "@/components/panel/StatCard";
 import QuickActions from "@/components/panel/QuickActions";
+import ServerCard from "@/components/panel/ServerCard";
 
 export default function PanelPage() {
   return (
@@ -55,15 +56,32 @@ export default function PanelPage() {
 
       {/* Dolna sekcja */}
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 rounded-2xl border border-white/10 bg-zinc-900/60 p-6">
-          <h2 className="mb-4 text-xl font-bold text-white">
-            Ostatnia aktywność
+        <div className="lg:col-span-2">
+          <h2 className="mb-6 text-2xl font-bold text-white">
+            Moje serwery
           </h2>
 
-          <p className="text-zinc-400">
-            Tutaj pojawią się informacje o uruchomionych serwerach,
-            płatnościach, ticketach i innych wydarzeniach.
-          </p>
+          <div className="grid gap-6 xl:grid-cols-2">
+            <ServerCard
+              name="Survival SMP"
+              game="Minecraft Java"
+              location="🇵🇱 Warszawa"
+              ram="4 GB RAM"
+              cpu="2 vCPU"
+              disk="50 GB NVMe"
+              status="online"
+            />
+
+            <ServerCard
+              name="FiveM RP"
+              game="FiveM"
+              location="🇩🇪 Frankfurt"
+              ram="8 GB RAM"
+              cpu="4 vCPU"
+              disk="80 GB NVMe"
+              status="online"
+            />
+          </div>
         </div>
 
         <QuickActions />
