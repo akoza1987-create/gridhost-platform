@@ -1,4 +1,15 @@
-export const servers = [
+export type Server = {
+  id: number;
+  name: string;
+  game: string;
+  location: string;
+  ram: string;
+  cpu: string;
+  disk: string;
+  status: "online" | "offline";
+};
+
+export const servers: Server[] = [
   {
     id: 1,
     name: "Survival SMP",
@@ -7,7 +18,7 @@ export const servers = [
     ram: "4 GB RAM",
     cpu: "2 vCPU",
     disk: "50 GB NVMe",
-    status: "online" as const,
+    status: "online",
   },
   {
     id: 2,
@@ -17,7 +28,7 @@ export const servers = [
     ram: "8 GB RAM",
     cpu: "4 vCPU",
     disk: "80 GB NVMe",
-    status: "online" as const,
+    status: "online",
   },
   {
     id: 3,
@@ -27,6 +38,6 @@ export const servers = [
     ram: "2 GB RAM",
     cpu: "1 vCPU",
     disk: "25 GB NVMe",
-    status: "offline" as const,
+    status: "offline",
   },
 ];
