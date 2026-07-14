@@ -1,4 +1,35 @@
-export const games = [
+export type Game = {
+  id: number;
+  slug: string;
+
+  name: string;
+  icon: string;
+
+  badge: string;
+
+  startingPrice: number;
+  basePrice: number;
+
+  image: string;
+
+  shortDescription: string;
+  description: string;
+
+  features: string[];
+
+  // Panel administratora
+  status: "active" | "hidden";
+
+  minRam: number;
+  recommendedRam: number;
+
+  minCpu: number;
+  recommendedCpu: number;
+
+  minDisk: number;
+};
+
+export const games: Game[] = [
   {
     id: 1,
     slug: "minecraft",
@@ -25,6 +56,16 @@ export const games = [
       "Codzienne kopie zapasowe",
       "Panel klienta",
     ],
+
+    status: "active",
+
+    minRam: 2,
+    recommendedRam: 6,
+
+    minCpu: 1,
+    recommendedCpu: 2,
+
+    minDisk: 20,
   },
 
   {
@@ -53,6 +94,16 @@ export const games = [
       "Panel klienta",
       "Automatyczne backupy",
     ],
+
+    status: "active",
+
+    minRam: 4,
+    recommendedRam: 8,
+
+    minCpu: 2,
+    recommendedCpu: 4,
+
+    minDisk: 40,
   },
 
   {
@@ -81,6 +132,16 @@ export const games = [
       "Auto Restart",
       "Panel klienta",
     ],
+
+    status: "active",
+
+    minRam: 4,
+    recommendedRam: 8,
+
+    minCpu: 2,
+    recommendedCpu: 4,
+
+    minDisk: 40,
   },
 
   {
@@ -109,5 +170,15 @@ export const games = [
       "Zaawansowana ochrona",
       "Panel klienta",
     ],
+
+    status: "active",
+
+    minRam: 8,
+    recommendedRam: 12,
+
+    minCpu: 4,
+    recommendedCpu: 6,
+
+    minDisk: 60,
   },
 ];
