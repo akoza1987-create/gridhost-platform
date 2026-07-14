@@ -1,3 +1,6 @@
+import ServerConsole from "./console/ServerConsole";
+import ServerFiles from "./files/ServerFiles";
+
 type ServerContentProps = {
   active: string;
 };
@@ -20,6 +23,7 @@ export default function ServerContent({
       );
 
     case "console":
+      return <ServerConsole />;
       return (
         <div className="rounded-2xl border border-white/10 bg-black p-8">
           <h2 className="mb-6 text-xl font-bold text-white">
@@ -40,6 +44,7 @@ export default function ServerContent({
       );
 
     case "files":
+      return <ServerFiles />;
       return (
         <div className="rounded-2xl border border-white/10 bg-zinc-900/60 p-8">
           <h2 className="text-2xl font-bold text-white">

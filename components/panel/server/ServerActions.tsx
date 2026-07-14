@@ -1,3 +1,6 @@
+import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
+
 type ServerActionsProps = {
   status: "online" | "offline";
 };
@@ -6,7 +9,7 @@ export default function ServerActions({
   status,
 }: ServerActionsProps) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-zinc-900/60 p-6">
+    <Card>
       <div className="mb-6">
         <h2 className="text-xl font-bold text-white">
           Sterowanie serwerem
@@ -29,18 +32,18 @@ export default function ServerActions({
       </div>
 
       <div className="flex flex-wrap gap-4">
-        <button className="rounded-xl bg-green-500 px-5 py-3 font-semibold text-black transition hover:bg-green-400">
+        <Button variant="success">
           ▶ Uruchom
-        </button>
+        </Button>
 
-        <button className="rounded-xl bg-yellow-500 px-5 py-3 font-semibold text-black transition hover:bg-yellow-400">
+        <Button variant="primary">
           🔄 Restart
-        </button>
+        </Button>
 
-        <button className="rounded-xl bg-red-500 px-5 py-3 font-semibold text-white transition hover:bg-red-400">
+        <Button variant="danger">
           ■ Zatrzymaj
-        </button>
+        </Button>
       </div>
-    </div>
+    </Card>
   );
 }

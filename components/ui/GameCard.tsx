@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/ui/Button";
 import { ArrowRight, Check } from "lucide-react";
 
 type GameCardProps = {
